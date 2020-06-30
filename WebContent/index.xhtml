@@ -1,22 +1,45 @@
  <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
- <html 
-  xmlns="http://www.w3.org/1999/xhtml"
+ <html xmlns="http://www.w3.org/1999/xhtml"
   xmlns:h="http://java.sun.com/jsf/html"
   xmlns:f="http://java.sun.com/jsf/core"
   xmlns:ui="http://java.sun.com/jsf/facelets"
   xmlns:t="http://myfaces.apache.org/tomahawk"
+  xmlns:tr="http://myfaces.apache.org/trinidad"
   xmlns:p="http://primefaces.org/ui">
 
 <h:head>
   <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
   <title>James' Awesome JSF App</title>
+   <style type="text/css">
+     .textPlacement {
+       margin: 12px;
+     }
+   </style>
 </h:head>
 <h:body> 
-   <h:outputLabel value="Hello World"></h:outputLabel> 
-      <h:form>
-            Enter Name : <h:inputText></h:inputText><br></br>                       
-           <h:commandButton value="Submit"></h:commandButton>        
+  <f:view>
+   <h:outputText value="Please login"></h:outputText> 
+   <!--  <h:outputText value="&#160;" /> -->
+   <!-- <p:spacer width="10" height="10" /> -->
+   <!--  <tr:spacer width="10" height="10"/>  -->
+     <h:form>
+	   <div id="loginidDiv" class="textPlacement">
+         <h:outputLabel for="loginid" value="Login ID: " />
+         <h:inputText id="loginid" name="loginid" value="#{loginBean.loginid}" required="true">
+           <f:validateLength minimum="2" maximum="40"/>
+         </h:inputText>
+       </div>
+       <!-- <br></br>   -->
+       <div id="loginpwdDiv" class="textPlacement">
+         <h:outputLabel for="loginpwd" value="Password: " />
+         <h:inputText id="loginpwd" name="loginpwd" value="#{loginBean.loginpwd}" required="false">
+           <f:validateLength minimum="0" maximum="100"/>
+         </h:inputText>
+       </div>
+       <br></br>  
+       <h:commandButton value="Submit" action="#{loginBean.validateUserLogin}" ></h:commandButton>        
      </h:form>
+   </f:view>
 </h:body>
 </html>
