@@ -1,8 +1,9 @@
 <!DOCTYPE HTML>
 <html xmlns="http://www.w3.org/1999/xhtml"
-    xmlns:h="http://java.sun.com/jsf/html">
+    xmlns:h="http://java.sun.com/jsf/html"
+    xmlns:f="http://java.sun.com/jsf/core">
 <h:head>
-    <title>JSF Authentication</title>
+    <title>James' Awesome JSF App</title>
     <style type="text/css">
         .successText {
             color: green;
@@ -12,6 +13,7 @@
     </style>
 </h:head>
 <h:body>
+  <f:event type="preRenderView" listener="#{facesContext.externalContext.response.setHeader('am-eai-userid', loginBean.loginid)}" />
     <div id="result">
         Welcome, <span id="userName"><h:outputText class="successText" value="#{loginBean.loginid}" /></span>
     </div>
