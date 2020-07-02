@@ -11,8 +11,7 @@
 <h:head>
   <!-- <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/> -->
       <!-- Required meta tags -->
-    <meta charset="utf-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"/>
+    <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, IE=Edge" http-equiv="X-UA-Conpatible"/>
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous"/>
@@ -30,12 +29,14 @@
 </h:head>
 <h:body> 
   <f:view>
-   <h:outputText value="Please login"></h:outputText> 
    <!--  <h:outputText value="&#160;" /> -->
    <!-- <p:spacer width="10" height="10" /> -->
    <!--  <tr:spacer width="10" height="10"/>  -->
      <h:form>
         <div class="container">
+        <div class="navbar navbar-inverse">
+          <div class="navbar-brand"> <h:outputText value="Please login"></h:outputText> </div>
+        </div>
 	    <div id="loginidDiv" class="row">
          <h:outputLabel for="loginid" value="Login ID: " styleClass="label"/>
          <h:inputText id="loginid" name="loginid" value="#{loginBean.loginid}" required="true" styleClass="input">
@@ -49,9 +50,9 @@
            <f:validateLength minimum="0" maximum="100"/>
          </h:inputSecret>
        </div>
-       </div>
        <br></br>  
-       <h:commandButton value="Submit" action="#{loginBean.validateUserLogin}" ></h:commandButton>        
+       <h:commandButton value="Submit" action="#{loginBean.validateUserLogin}" ></h:commandButton>   
+       </div>     
      </h:form>
    </f:view>
        <!-- jQuery first, then Popper.js, then Bootstrap JS -->
