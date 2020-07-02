@@ -17,5 +17,10 @@
     <div id="result">
         Welcome, <span id="userName"><h:outputText class="successText" value="#{loginBean.loginid}" /></span>
     </div>
+    
+    <h:form>
+    <h:commandLink value = "Logout" action="#{loginBean.logout}" />
+</h:form>
+    
 </h:body>
 </html>

@@ -2,6 +2,8 @@ package utils;
 
 //import javax.faces.bean.ManagedBean;
 import javax.inject.Named;
+
+import java.io.IOException;
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Hashtable;
@@ -25,6 +27,8 @@ import javax.naming.directory.SearchResult;
 import static javax.naming.directory.SearchControls.SUBTREE_SCOPE;
 //import javax.faces.SessionScoped;
 import javax.enterprise.context.SessionScoped;
+import javax.faces.context.ExternalContext;
+import javax.faces.context.FacesContext;
 
 //@ManagedBean 
 @Named 
@@ -136,6 +140,12 @@ public class LoginBean implements Serializable {
             buf.append("DC=").append(token);
         }
         return buf.toString();
+    }
+    
+    public void logout() throws IOException {
+        ExternalContext ec = FacesContext.getCurrentInstance().getExternalContext();
+        ec.invalidateSession();
+        ec.redirect(ec.getRequestContextPath() + "/index.xhtml");
     }
     
 	
