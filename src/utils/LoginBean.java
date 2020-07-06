@@ -18,7 +18,7 @@ import javax.naming.NamingEnumeration;
 import javax.naming.NamingException;
 import javax.naming.directory.Attribute;
 import javax.naming.directory.Attributes;
-import javax.naming.directory.DirContext;
+//import javax.naming.directory.DirContext;
 import javax.naming.directory.SearchControls;
 import javax.naming.directory.SearchResult;
 
@@ -27,6 +27,7 @@ import javax.naming.directory.SearchResult;
 import static javax.naming.directory.SearchControls.SUBTREE_SCOPE;
 //import javax.faces.SessionScoped;
 import javax.enterprise.context.SessionScoped;
+//import javax.faces.bean.ManagedBean;
 import javax.faces.context.ExternalContext;
 import javax.faces.context.FacesContext;
 
