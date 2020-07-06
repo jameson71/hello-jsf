@@ -19,4 +19,10 @@
         </navigation-case>
     </navigation-rule>
 
+<managed-bean>
+ <managed-bean-name>loginBean</managed-bean-name>
+ <managed-bean-class>utils.LoginBean</managed-bean-class>
+ <managed-bean-scope>session</managed-bean-scope>
+ </managed-bean>
+
 </faces-config>

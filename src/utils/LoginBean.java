@@ -1,5 +1,6 @@
 package utils;
 
+import javax.inject.Inject;
 //import javax.faces.bean.ManagedBean;
 import javax.inject.Named;
 
@@ -25,15 +26,21 @@ import javax.naming.directory.SearchResult;
 
 
 import static javax.naming.directory.SearchControls.SUBTREE_SCOPE;
+
+//import javax.annotation.PostConstruct;
+import javax.enterprise.context.ApplicationScoped;
 //import javax.faces.SessionScoped;
-import javax.enterprise.context.SessionScoped;
+//import javax.enterprise.context.SessionScoped;
 //import javax.faces.bean.ManagedBean;
 import javax.faces.context.ExternalContext;
 import javax.faces.context.FacesContext;
 
+
+
 //@ManagedBean 
 @Named 
-@SessionScoped
+//@SessionScoped
+@ApplicationScoped
 public class LoginBean implements Serializable {
 	
 	private static final long serialVersionUID = 1L;
@@ -56,6 +63,15 @@ public class LoginBean implements Serializable {
 	public void setLoginpwd(String loginpwd) {
 		this.loginpwd = loginpwd;
 	}
+	
+ //   @Inject
+ //   private LoginBean loginBean;
+	
+/*	@PostConstruct
+	public void init() {
+	    LoginBean loginBean = new LoginBean ();
+	} */
+	
 	
 	public String validateUserLogin() {
 		String navResult = "";

@@ -39,14 +39,14 @@
         </div>
 	    <div id="loginidDiv" class="row">
          <h:outputLabel for="loginid" value="Login ID: " styleClass="label"/>
-         <h:inputText id="loginid" name="loginid" value="#{LoginBean.loginid}" required="true" styleClass="input">
+         <h:inputText id="loginid" name="loginid" value="#{loginBean.loginid}" required="true" styleClass="input">
            <f:validateLength minimum="2" maximum="40"/>
          </h:inputText>
        </div>
        <!-- <br></br>   -->
        <div id="loginpwdDiv" class="row">
          <h:outputLabel for="loginpwd" value="Password: " styleClass="label"/>
-         <h:inputSecret id="loginpwd" name="loginpwd" value="#{LoginBean.loginpwd}" required="false" styleClass="input">
+         <h:inputSecret id="loginpwd" name="loginpwd" value="#{loginBean.loginpwd}" required="false" styleClass="input">
            <f:validateLength minimum="0" maximum="100"/>
          </h:inputSecret>
        </div>
