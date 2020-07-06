@@ -28,7 +28,8 @@ import javax.naming.directory.SearchResult;
 import static javax.naming.directory.SearchControls.SUBTREE_SCOPE;
 
 //import javax.annotation.PostConstruct;
-import javax.enterprise.context.ApplicationScoped;
+//import javax.enterprise.context.ApplicationScoped;
+import javax.enterprise.context.SessionScoped;
 //import javax.faces.SessionScoped;
 //import javax.enterprise.context.SessionScoped;
 //import javax.faces.bean.ManagedBean;
@@ -39,8 +40,8 @@ import javax.faces.context.FacesContext;
 
 //@ManagedBean 
 @Named 
-//@SessionScoped
-@ApplicationScoped
+@SessionScoped
+//@ApplicationScoped
 public class LoginBean implements Serializable {
 	
 	private static final long serialVersionUID = 1L;

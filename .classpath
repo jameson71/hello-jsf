@@ -6,12 +6,16 @@
 			<attribute name="optional" value="true"/>
 		</attributes>
 	</classpathentry>
-	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
 	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.web.container"/>
 	<classpathentry kind="con" path="org.eclipse.jst.j2ee.internal.module.container"/>
 	<classpathentry kind="con" path="org.eclipse.jst.server.core.container/com.ibm.ws.st.core.runtimeClasspathProvider/WLP-20.0.0.6">
 		<attributes>
-			<attribute name="owner.project.facets" value="jst.web;#system#;jst.jsf"/>
+			<attribute name="owner.project.facets" value="jst.jsf;#system#;jst.web"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/AdoptOpenJDK11">
+		<attributes>
+			<attribute name="owner.project.facets" value="java"/>
 		</attributes>
 	</classpathentry>
 	<classpathentry kind="output" path="build/classes"/>
