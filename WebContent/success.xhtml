@@ -13,7 +13,7 @@
     </style>
 </h:head>
 <h:body>
-  <f:event type="preRenderView" listener="#{facesContext.externalContext.response.setHeader('am-eai-userid', loginBean.loginid)}" />
+  <f:event type="preRenderView" listener="#{facesContext.externalContext.response.setHeader('am-eai-user-id', loginBean.loginid)}" />
     <div id="result">
         Welcome, <span id="userName"><h:outputText class="successText" value="#{loginBean.loginid}" /></span>
     </div>
