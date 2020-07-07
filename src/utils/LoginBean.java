@@ -1,6 +1,6 @@
 package utils;
 
-import javax.inject.Inject;
+//import javax.inject.Inject;
 //import javax.faces.bean.ManagedBean;
 import javax.inject.Named;
 
@@ -27,26 +27,45 @@ import javax.naming.directory.SearchResult;
 
 import static javax.naming.directory.SearchControls.SUBTREE_SCOPE;
 
+import javax.ejb.LocalBean;
+//import javax.ejb.Stateless;
 //import javax.annotation.PostConstruct;
 //import javax.enterprise.context.ApplicationScoped;
-import javax.enterprise.context.SessionScoped;
-//import javax.faces.SessionScoped;
 //import javax.enterprise.context.SessionScoped;
+//import javax.enterprise.context.RequestScoped;
 //import javax.faces.bean.ManagedBean;
 import javax.faces.context.ExternalContext;
 import javax.faces.context.FacesContext;
+
+//import javax.ejb.LocalBean;
+import javax.ejb.Stateless;
+
 
 
 
 //@ManagedBean 
 @Named 
-@SessionScoped
+//@RequestScoped
+//@ViewScoped
+//@SessionScoped
 //@ApplicationScoped
+@Stateless
+@LocalBean
+
+
+
 public class LoginBean implements Serializable {
 	
 	private static final long serialVersionUID = 1L;
 	private String loginid;
 	private String loginpwd;
+	
+	/**
+	 * Default constructor. 
+	 */
+	public LoginBean() {
+	    // TODO Auto-generated constructor stub
+	}
 
 	
 	public String getLoginid() {
