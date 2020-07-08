@@ -15,17 +15,15 @@
       <!-- Required meta tags -->
     <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, IE=Edge" http-equiv="X-UA-Conpatible"/>
 
-    <!-- Bootstrap CSS -->
+    <!-- Bootstrap CSS --> 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous"/>
   
+  
   <title>James' Awesome JSF App</title>
-   <style type="text/css">
-     .textPlacement {
-       margin: 12px;
-       
-     label {
-      text-align: left;
-     }
+       <style type="text/css">
+        .col-xs-updated {        
+            width: 92% !important;
+        }
    </style> 
   <!--   <h:outputStylesheet name="css/hello-jsf.css" /> -->
 </h:head>
@@ -34,33 +32,43 @@
    <!--  <h:outputText value="&#160;" /> -->
    <!-- <p:spacer width="10" height="10" /> -->
    <!--  <tr:spacer width="10" height="10"/>  -->
-     <h:form>
-     <f:passThroughAttribute name="autocomplete" value="off"/>
-        <div class="container">
-        <div class="navbar navbar-inverse">
-          <div class="navbar-brand"> <h:outputText value="Please login"></h:outputText> </div>
-        </div>
-	    <div id="loginidDiv" class="row">
-         <h:outputLabel for="loginid" value="Login ID: " styleClass="label"/>
-         <h:inputText id="loginid" name="loginid" value="#{loginBean.loginid}" required="true" styleClass="input" a:autofocus="true">
+     <div class="container justify-content-center">
+       <div class="navbar navbar-inverse">
+         <div class="navbar-brand  col-sm-2"> <h:outputText value="Please login"></h:outputText> </div>
+       </div>
+       <div class="row">
+       <div class="col-xs-12 col-xs-updated">
+       <h:form styleClass="form-horizontal">
+       <f:passThroughAttribute name="autocomplete" value="off"/>
+	    <div id="loginidDiv" class="control-group row">
+         <h:outputLabel for="loginid" value="Login ID: " styleClass="control-label col-sm-2 text-right"/>
+         <div class="col-sm-10">
+         <h:inputText id="loginid" name="loginid" value="#{loginBean.loginid}" required="true" a:placeholder="Login" styleClass="form-control " a:tabindex="1" a:autofocus="">
            <f:validateLength minimum="2" maximum="40"/>
          </h:inputText>
-       </div>
-       <!-- <br></br>   -->
-       <div id="loginpwdDiv" class="row">
-         <h:outputLabel for="loginpwd" value="Password: " styleClass="label"/>
-         <h:inputSecret id="loginpwd" name="loginpwd" value="#{loginBean.loginpwd}" required="false" styleClass="input">
+         </div>
+        </div>
+        <!-- <br></br>   -->
+        <div id="loginpwdDiv" class="control-group row">
+         <h:outputLabel for="loginpwd" value="Password: " styleClass="control-label col-sm-2 text-right"/>
+         <div class="col-sm-10">
+         <h:inputSecret id="loginpwd" name="loginpwd" value="#{loginBean.loginpwd}" required="false" a:placeholder="Password" styleClass="form-control" a:tabindex="2">
            <f:validateLength minimum="0" maximum="100"/>
          </h:inputSecret>
-       </div>
-       <br></br>  
-       <h:commandButton value="Submit" action="#{loginBean.validateUserLogin}" ></h:commandButton>   
-       </div>     
+         </div>
+        </div>
+        <br></br>  
+        <h:commandButton value="Submit" action="#{loginBean.validateUserLogin}" styleClass="btn btn-default col-sm-2 text-right" a:tabindex="3"></h:commandButton>  
+       <!--  /div >
+       </div -->  
      </h:form>
+     </div>
+     </div>  
+     </div>
    </f:view>
-       <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
 </h:body>
+   <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.bundle.min.js" integrity="sha384-1CmrxMRARb6aLqgBO7yyAxTOQE2AKb9GfXnEo760AUcUmFx3ibVJJAzGytlQcNXd" crossorigin="anonymous"></script>
+
 </html>

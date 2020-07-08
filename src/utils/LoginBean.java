@@ -32,7 +32,7 @@ import javax.ejb.LocalBean;
 //import javax.annotation.PostConstruct;
 //import javax.enterprise.context.ApplicationScoped;
 //import javax.enterprise.context.SessionScoped;
-//import javax.enterprise.context.RequestScoped;
+import javax.enterprise.context.RequestScoped;
 //import javax.faces.bean.ManagedBean;
 import javax.faces.context.ExternalContext;
 import javax.faces.context.FacesContext;
@@ -45,11 +45,11 @@ import javax.ejb.Stateless;
 
 //@ManagedBean 
 @Named 
-//@RequestScoped
+@RequestScoped
 //@ViewScoped
 //@SessionScoped
 //@ApplicationScoped
-@Stateless
+//@Stateless
 @LocalBean
 
 
