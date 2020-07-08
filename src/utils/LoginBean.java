@@ -110,7 +110,8 @@ public class LoginBean implements Serializable {
 		//most code came from here: https://stackoverflow.com/questions/390150/authenticating-against-active-directory-with-java-on-linux
 		//with some updates from here: https://docs.oracle.com/javase/tutorial/jndi/ldap/authentication.html
         String principalName = loginid + "@" + domainName;
-        System.out.println("Principlename is: " + principalName);
+        System.out.println("AD UPN is: " + principalName);
+        
         props.put(Context.SECURITY_AUTHENTICATION, "simple");
         props.put(Context.SECURITY_PRINCIPAL, principalName);
         props.put(Context.SECURITY_CREDENTIALS, loginpwd);
@@ -176,6 +177,7 @@ public class LoginBean implements Serializable {
                 buf.append(",");
             buf.append("DC=").append(token);
         }
+        System.out.println("DC to String gave: " + buf.toString());
         return buf.toString();
     }
     
