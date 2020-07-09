@@ -1,0 +1,44 @@
+ <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+ "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+ <html xmlns="http://www.w3.org/1999/xhtml"
+  xmlns:h="http://java.sun.com/jsf/html"
+  xmlns:f="http://java.sun.com/jsf/core"
+  xmlns:ui="http://java.sun.com/jsf/facelets"
+  xmlns:jsf="http://xmlns.jcp.org/jsf"
+  xmlns:a="http://xmlns.jcp.org/jsf/passthrough"
+  xmlns:t="http://myfaces.apache.org/tomahawk"
+  xmlns:tr="http://myfaces.apache.org/trinidad"
+  xmlns:p="http://primefaces.org/ui">
+
+
+<ui:composition template="/WEB-INF/resources/templates/template.xhtml">
+    
+    <h:form styleClass="form-horizontal">
+       <f:passThroughAttribute name="autocomplete" value="off"/>
+	    <div id="loginidDiv" class="control-group row">
+         <h:outputLabel for="loginid" value="Login ID: " styleClass="control-label col-sm-2 text-right"/>
+         <div class="col-sm-10">
+         <h:inputText id="loginid" name="loginid" value="#{loginBean.loginid}" required="true" a:placeholder="Login" styleClass="form-control " a:tabindex="1" a:autofocus="">
+           <f:validateLength minimum="2" maximum="40"/>
+         </h:inputText>
+         </div>
+        </div>
+        <!-- <br></br>   -->
+        <div id="loginpwdDiv" class="control-group row">
+         <h:outputLabel for="loginpwd" value="Password: " styleClass="control-label col-sm-2 text-right"/>
+         <div class="col-sm-10">
+         <h:inputSecret id="loginpwd" name="loginpwd" value="#{loginBean.loginpwd}" required="false" a:placeholder="Password" styleClass="form-control" a:tabindex="2">
+           <f:validateLength minimum="0" maximum="100"/>
+         </h:inputSecret>
+         </div>
+        </div>
+        <br></br>  
+        <h:commandButton value="Submit" action="#{loginBean.validateUserLogin}" styleClass="btn btn-default col-sm-2 text-right" a:tabindex="3"></h:commandButton>  
+       <!--  /div >
+       </div -->  
+     </h:form>
+    
+    
+</ui:composition >
+
+</html>
