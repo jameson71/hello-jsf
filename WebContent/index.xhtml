@@ -42,20 +42,20 @@
 	    <div id="loginidDiv" class="control-group row">
          <h:outputLabel for="loginid" value="Login ID:" styleClass="control-label col-sm-2 text-right"/>
          <!--  div class="col-sm-10"> -->
-         <h:inputText id="loginid" name="loginid" value="#{loginBean.loginid}" required="true" a:placeholder="Login" styleClass="form-control col-sm-2" a:tabindex="1" a:autofocus="">
+         <h:inputText id="loginid" name="loginid" value="#{loginBean.loginid}" required="true" a:placeholder="Login" styleClass="form-control col-sm-3" a:tabindex="1" a:autofocus="">
            <f:validateLength minimum="2" maximum="40"/>
          </h:inputText>
-         <div class="col-sm-8"/>
+         <div class="col-sm-7"/>
          </div>
         <!--  /div> -->
         <!-- <br></br>   -->
-        <div id="loginpwdDiv" class="control-group row mt-1">
+        <div id="loginpwdDiv" class="control-group row mt-2">
          <h:outputLabel for="loginpwd" value="Password:" styleClass="control-label col-sm-2 text-right"/>
          <!--  div class="col-sm-10"> -->
-         <h:inputSecret id="loginpwd" name="loginpwd" value="#{loginBean.loginpwd}" required="false" a:placeholder="Password" styleClass="form-control col-sm-2" a:tabindex="2">
+         <h:inputSecret id="loginpwd" name="loginpwd" value="#{loginBean.loginpwd}" required="false" a:placeholder="Password" styleClass="form-control col-sm-3" a:tabindex="2">
            <f:validateLength minimum="0" maximum="100"/>
          </h:inputSecret>
-         <div class="col-sm-8"/>
+         <div class="col-sm-7"/>
          </div>
         <!-- </div> -->
         <br></br>  
