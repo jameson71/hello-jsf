@@ -14,7 +14,7 @@
 </h:head>
 <h:body>
   <f:event type="preRenderView" listener="#{facesContext.externalContext.response.setHeader('am-eai-user-id', loginBean.loginid)}" />
-  <f:event type="preRenderView" listener="#{facesContext.externalContext.response.setHeader('am-eai-auth-level', "1")}" />
+  <f:event type="preRenderView" listener="#{facesContext.externalContext.response.setHeader('am-eai-auth-level', '1')}" />
     <div id="result">
         Welcome, <span id="userName"><h:outputText class="successText" value="#{loginBean.loginid}" /></span>
     </div>
